@@ -1,5 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { StyledWeatherPage } from "./StyledComponents";
 
 export default function Ciudad({ city }) {
   const history = useHistory();
@@ -8,7 +10,7 @@ export default function Ciudad({ city }) {
     return null;
   } else {
     return (
-      <div className="ciudad">
+      <StyledWeatherPage>
         <div className="container">
           <h2>{city.name}</h2>
           <div className="info">
@@ -20,7 +22,8 @@ export default function Ciudad({ city }) {
             <div>Longitud: {city.longitud}º</div>
           </div>
         </div>
-      </div>
+        <NavLink to="/">&#x23EA;</NavLink>
+      </StyledWeatherPage>
     );
   }
 }

@@ -36,10 +36,10 @@ function App() {
           latitud: recurso.coord.lat,
           longitud: recurso.coord.lon,
         };
-        const exist = cities.findIndex((city) => city.id === ciudad.id);
-        if (exist !== -1) {
+        const cityIndex = cities.findIndex((city) => city.id === ciudad.id);
+        if (cityIndex !== -1) {
           const newCities = [...cities];
-          newCities[exist] = ciudad;
+          newCities[cityIndex] = ciudad;
           setCities(() => newCities);
         } else {
           setCities((oldCities) => [...oldCities, ciudad]);

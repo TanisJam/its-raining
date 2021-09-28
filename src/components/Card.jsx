@@ -5,8 +5,13 @@ import { StyledCard, BtnClose } from "./StyledComponents";
 export default function Card({ max, min, name, id, img, onClose, onClick }) {
   return (
     <StyledCard onClick={(e) => onClick(e)} id={id}>
-      <BtnClose onClick={onClose}>X</BtnClose>
-      <p> {name} </p>
+      <p>
+        {" "}
+        {name}{" "}
+        <sup>
+          <BtnClose onClick={onClose}>&#10060;</BtnClose>
+        </sup>{" "}
+      </p>
       <div className="c-body">
         <div>
           Min <span> {min}º</span>
