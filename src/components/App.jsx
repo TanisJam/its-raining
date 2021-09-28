@@ -19,7 +19,7 @@ function App() {
   const onSearch = async (ciudad) => {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`
       );
       const recurso = await response.json();
       if (recurso.main !== undefined) {
